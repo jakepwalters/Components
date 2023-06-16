@@ -38,17 +38,17 @@ a {
   background-color: black;
 }
 @media only screen and (max-width: 768px) {
-  .hamburger.active__bar:nth-child(2) {
+  .hamburger .active__bar:nth-child(2) {
     opacity: 0;
   }
 }
 @media only screen and (max-width: 768px) {
-  .hamburger.active__bar:nth-child(1) {
+  .hamburger .active__bar:nth-child(1) {
     transform: translateY(0.8rem) rotate(45deg);
   }
 }
 @media only screen and (max-width: 768px) {
-  .hamburger.active__bar:nth-child(3) {
+  .hamburger .active__bar:nth-child(3) {
     transform: translateY(-0.8rem) rotate(-45deg);
   }
 }
