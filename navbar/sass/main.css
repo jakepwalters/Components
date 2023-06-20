@@ -59,6 +59,11 @@ a {
   display: flex;
   justify-content: space-between;
 }
+@media only screen and (min-width: 768px) {
+  .navbar__mobile {
+    display: none;
+  }
+}
 .navbar__mobile--btn {
   display: none;
   background-color: transparent;
@@ -83,9 +88,6 @@ a {
     background-color: black;
   }
 }
-.navbar__mobile--items {
-  display: none;
-}
 .navbar__mobile--logo {
   display: none;
 }
@@ -93,4 +95,17 @@ a {
   .navbar__mobile--logo {
     display: block;
   }
+}
+
+.disabled {
+  display: none;
+}
+
+.active {
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  transition: all 0.3s ease-in-out;
+  background-color: #343a40;
+  z-index: 1;
 }/*# sourceMappingURL=main.css.map */
