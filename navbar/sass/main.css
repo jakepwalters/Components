@@ -96,12 +96,23 @@ a {
     display: block;
   }
 }
+.navbar__mobile--close {
+  display: none;
+  background-color: transparent;
+  border: none;
+  font-size: 3rem;
+}
+.navbar__mobile--close--btn {
+  height: 3rem;
+  width: 3rem;
+  color: #fc0;
+}
 
-.disabled {
+.disableMobile {
   display: none;
 }
 
-.active {
+.activateMobile {
   display: block;
   height: 100vh;
   width: 100vw;

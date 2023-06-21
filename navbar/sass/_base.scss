@@ -110,14 +110,27 @@ $shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
 				display: block;
 			}
 		}
+
+		&--close {
+			display: none;
+			background-color: transparent;
+			border: none;
+			font-size: 3rem;
+
+			&--btn {
+				height: 3rem;
+				width: 3rem;
+				color: $color-yellow;
+			}
+		}
 	}
 }
 
-.disabled {
+.disableMobile {
 	display: none;
 }
 
-.active {
+.activateMobile {
 	display: block;
 	height: 100vh;
 	width: 100vw;
