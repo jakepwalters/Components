@@ -70,22 +70,16 @@ $shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
 	}
 
 	&__mobile {
-		display: flex;
-		justify-content: space-between;
-
-		@media only screen and (min-width: 768px) {
-			display: none;
-		}
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(5, 1fr);
+		justify-items: center;
+		align-items: center;
 
 		&--btn {
-			display: none;
+			grid-column: 3 / 4;
 			background-color: transparent;
 			border: none;
-
-			@media only screen and (max-width: 768px) {
-				display: block;
-				cursor: pointer;
-			}
 		}
 
 		&--bar {
@@ -102,20 +96,42 @@ $shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
 		}
 
 		&--items {
-		}
+			display: block;
 
-		&--logo {
-			display: none;
-			@media only screen and (max-width: 768px) {
-				display: block;
+			&--link {
+				grid-column: 2 / 3;
+
+				&--1 {
+					grid-row: 2 / 3;
+				}
+
+				&--2 {
+					grid-row: 3 / 4;
+				}
+
+				&--3 {
+					grid-row: 4 / 5;
+				}
+
+				&--4 {
+					grid-row: 5 / 6;
+				}
 			}
 		}
 
+		&--logo {
+			grid-column: 1 / 2;
+		}
+
 		&--close {
-			display: none;
+			grid-column: 3 / 4;
 			background-color: transparent;
 			border: none;
 			font-size: 3rem;
+
+			&:hover {
+				cursor: pointer;
+			}
 
 			&--btn {
 				height: 3rem;
@@ -126,15 +142,6 @@ $shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
 	}
 }
 
-.disableMobile {
+.disabled {
 	display: none;
-}
-
-.activateMobile {
-	display: block;
-	height: 100vh;
-	width: 100vw;
-	transition: all 0.3s ease-in-out;
-	background-color: $color-gray-dark;
-	z-index: 1;
 }
